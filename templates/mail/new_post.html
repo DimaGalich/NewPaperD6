@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Post</title>
+</head>
+<!-- Подгружается в News_Paper\news\tasks\basic.py -->
+<body>
+    <h2>Для вас новый пост</h2>
+    <h3>
+        В категории <strong>{{category.name}}</strong> появился пост от Автора <strong>{{post.author}}</strong>
+    </h3>
+    <p>Перейдите по ссылке:
+        <a href="http://127.0.0.1:8000{% url 'post_detail' post.id %}"> <h3>{{ post.title }}</h3> </a>
+        {{ post.preview|truncatechars:30 }} 
+    </p>
+
+    
+</body>
+</html>
